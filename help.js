@@ -617,7 +617,7 @@ const MosiTradingPlatform = () => {
                   <div className="flex items-center">
                     <button
                       onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      className="md:hidden mr-4 absolute right-0"
+                      className="md:hidden mr-4"
                     >
                       <Menu className="w-6 h-6" />
                     </button>
@@ -657,23 +657,22 @@ const MosiTradingPlatform = () => {
                     )}
                   </nav>
                   
-                   {/* Connect Wallet button - hidden on mobile */}
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
-                <Bell className="w-5 h-5" />
-              </button>
-              <button className="flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
-                <Wallet className="w-4 h-4 mr-2" />
-                Connect Wallet
-              </button>
-            </div>
+                  <div className="flex items-center space-x-4">
+                    <button className="p-2 hover:bg-gray-100 rounded-lg">
+                      <Bell className="w-5 h-5" />
+                    </button>
+                    <button className="flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                      <Wallet className="w-4 h-4 mr-2" />
+                      Connect Wallet
+                    </button>
+                  </div>
                 </div>
               </div>
             </header>
       
             {/* Mobile Menu */}
             {showMobileMenu && (
-              <div className="md:hidden bg-[#e5e7eb]  border-b">
+              <div className="md:hidden bg-white border-b">
                 <nav className="container mx-auto px-4 py-2">
                   <button
                     onClick={() => { setActiveTab('dashboard'); setShowMobileMenu(false); }}
@@ -709,14 +708,6 @@ const MosiTradingPlatform = () => {
                       Admin
                     </button>
                   )}
-                   {/* Connect Wallet button in mobile menu */}
-            <button 
-              className="flex items-center w-full px-4 py-3 mt-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
-              onClick={() => setShowMobileMenu(false)}
-            >
-              <Wallet className="w-4 h-4 mr-2" />
-              Connect Wallet
-            </button>
                 </nav>
               </div>
             )}
